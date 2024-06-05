@@ -88,7 +88,7 @@ namespace AppointmentExample.Auction
                     _startPrice += amount;
                     _stopwatch.Restart();
                     Console.WriteLine($"{user}'s bid added successfully. Current price: {_startPrice}");
-                    Thread.Sleep(50);
+                    Thread.Sleep(2000); //bidding time 2s
                 }
                 else
                 {

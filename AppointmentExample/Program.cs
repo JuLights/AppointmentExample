@@ -22,7 +22,7 @@ namespace AppointmentExample
 
             var car = new Car();
             var auction = new Auction.Auction(car, (decimal)100.00, TimeSpan.FromSeconds(10));
-            AuctionTester(15, (decimal)150.00, (decimal)500.00, auction);
+            AuctionTester(30, (decimal)150.00, (decimal)500.00, auction);
 
             Console.ReadLine();
         }
@@ -35,8 +35,9 @@ namespace AppointmentExample
             var rnd = new Random();
             for (int i = 0; i < numberOfConcurrentThs; i++)
             {
-                threads[i] = new Thread(() => auction.AddOffer($"User{i}", increaseConstant));
-                Thread.Sleep(rnd.Next(1,15)*500);
+                int userId = i + 1;
+                threads[i] = new Thread(() => auction.AddOffer($"User{userId}", increaseConstant));
+                //Thread.Sleep(rnd.Next(1,15)*500);
                 threads[i].Start();
             }
             foreach (var thread in threads)
