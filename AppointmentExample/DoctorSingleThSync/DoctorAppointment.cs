@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AppointmentExample
+namespace AppointmentExample.DoctorSingleThSync
 {
     public class DoctorAppointment
     {
@@ -31,7 +31,7 @@ namespace AppointmentExample
                     Console.WriteLine($"{patientName} successfully booked {timeSlot}");
                     return true;
                 }
-                else if(_timeSlots.Contains(newTime) && !bookings.ContainsKey(newTime))
+                else if (_timeSlots.Contains(newTime) && !bookings.ContainsKey(newTime))
                 {
                     //can do new booking if first user failed to book on prefered time,
                     //i can shift it by 1hrs and book next from timeSlot , shifting function in TimeHelper.cs

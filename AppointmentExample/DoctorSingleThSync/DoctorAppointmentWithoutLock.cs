@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AppointmentExample
+namespace AppointmentExample.DoctorSingleThSync
 {
     public class DoctorAppointmentWithoutLock
     {
