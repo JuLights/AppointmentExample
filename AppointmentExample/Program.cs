@@ -75,7 +75,7 @@ namespace AppointmentExample
 
             foreach (var thread in threads)
             {
-                thread.Join();
+                thread.Join()
             }
 
         }
