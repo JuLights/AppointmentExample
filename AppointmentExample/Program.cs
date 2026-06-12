@@ -24,7 +24,7 @@ namespace AppointmentExample
             var auction = new Auction.Auction(car, (decimal)100.00, TimeSpan.FromSeconds(10));
             AuctionTester(30, (decimal)150.00, (decimal)500.00, auction);
 
-            Console.ReadLine()
+            Console.ReadLine();
         }
 
         private static void AuctionTester(int numberOfConcurrentThs,decimal increaseConstant, decimal startPrice, Auction.Auction auction)
